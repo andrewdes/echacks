@@ -16,6 +16,8 @@ def run_control(commands):
         if commands.empty():
             continue
         else:
-            ardunio.write(commands.get())
+            cmd = commands.get()
+            print cmd
+            ardunio.write(cmd)
 
         time.sleep(0.02)

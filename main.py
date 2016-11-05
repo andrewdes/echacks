@@ -10,15 +10,15 @@ def move_camera(x, y, w, h):
     midy = y + (h/2)
 
     # Hardcoded values here correspond to thirds of the resolution values
-    if midx < 427:
+    if midx < 240:
         commands.put('d')
-    elif midx > 835:
+    elif midx > 480:
         commands.put('a')
 
     # y-axis is at top
-    if midy < 240:
+    if midy < 160:
         commands.put('s')
-    elif midy > 480:
+    elif midy > 320:
         commands.put('w')
 
 

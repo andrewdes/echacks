@@ -1,2 +1,2 @@
-baudrate = 19800
+baudrate = 9600
 port = "COM4"
