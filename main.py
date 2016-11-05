@@ -31,8 +31,13 @@ def main():
     # Config stuff
     camera_port = 1  # Port 0 is built-in, port 1 is eternal
     camera = cv2.VideoCapture(camera_port)
-    camera.set(3,1280)
-    camera.set(4,720)
+
+    if not camera.isOpened():
+        print "External camera not found, please plug one in"
+        return
+
+    camera.set(3,720)
+    camera.set(4,480)
 
     # Start arduino control process
     cmd = Process(target=control.run_control, args=((commands),))
