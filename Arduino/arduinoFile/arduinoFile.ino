@@ -9,7 +9,7 @@ const int dly = 25; //delay
 int pos = 90; 
 
 //Servo2 variables
-const int s2dly = 20; //stepper delay
+const int s2dly = 30; //stepper delay
 const int servoPin2 = 7;
 const int s2Stop = 90;
 const int s2Left = 180;
