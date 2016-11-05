@@ -4,9 +4,9 @@
 const int servoPin = 8; //pin number
 const int maxpos = 180; //maximum position
 const int minpos = 10; //minimum position
-const int distance = 10; //distance each keypress moves servo
+const int distance = 3; //distance each keypress moves servo
 const int dly = 500; //delay
-int pos = 10; 
+int pos = 90; 
 
 //Servo2 variables
 const int s2dly = 70; //stepper delay
@@ -33,13 +33,13 @@ void loop()
     char input = Serial.read();
     if (input == 'w'){
       if (pos <=  (maxpos - distance)){
-        pos += distance;
+        pos -= distance;
         servo.write(pos);
         delay(dly);
       }     
     }else if (input == 's'){
       if (pos >= (minpos + distance)){
-        pos -= distance;
+        pos += distance;
         servo.write(pos);
         delay(dly); 
       }//end if pos     
