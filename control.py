@@ -19,5 +19,3 @@ def run_control(commands):
             cmd = commands.get()
             print cmd
             ardunio.write(cmd)
-
-        time.sleep(0.02)

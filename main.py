@@ -48,7 +48,6 @@ def draw_on(image, faces, grid):
     cv2.waitKey(1)
 
 
-
 def main():
     # Config stuff
     camera_port = 1  # Port 0 is built-in, port 1 is eternal
@@ -87,7 +86,7 @@ def main():
         faces = frontCascade.detectMultiScale(
             gray,
             scaleFactor=1.1,
-            minNeighbors=5,
+            minNeighbors=7,
             minSize=(40, 40),
             flags=cv2.cv.CV_HAAR_SCALE_IMAGE
         )
@@ -103,5 +102,5 @@ def main():
         draw_on(image, faces, grid)
 
 if __name__ == '__main__':
-    cProfile.run("main()")
+    main()
 
