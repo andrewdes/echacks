@@ -4,9 +4,9 @@
 const int servoPin = 8; //pin number
 const int maxpos = 180; //maximum position
 const int minpos = 10; //minimum position
-const int distance = 10; //distance each keypress moves servo
+const int distance = 3; //distance each keypress moves servo
 const int dly = 25; //delay
-int pos = 10; 
+int pos = 90; 
 
 //Servo2 variables
 const int s2dly = 20; //stepper delay
